@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import Spinner from "../Spinner/Spinner";
+import { Redirect } from "react-router-dom";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faKey, faUser } from "@fortawesome/free-solid-svg-icons";
 
-export default function Login() {
+export default function Login({ user }) {
+	const [link, redirect] = useState(null);
 	const [error, set_error] = useState("");
 	const [loading, set_loading] = useState(false);
 	const name_ref = useRef(null);
@@ -29,41 +31,43 @@ export default function Login() {
 		</button>
 	);
 
-	return (
-		<div className="login">
-			<div className="login__container">
-				<div className="login__head">
-					<h1 className="login__title">
-						<Icon className="login__icon" icon={faKey} /> Login
-					</h1>
+	if (link) return <Redirect to={link} />;
+	else
+		return (
+			<div className="login">
+				<div className="login__container">
+					<div className="login__head">
+						<h1 className="login__title">
+							<Icon className="login__icon" icon={faKey} /> Login
+						</h1>
+					</div>
+					<form className="login__form" onSubmit={submit}>
+						<div className="login__input-group">
+							<div className="login__icon-box">
+								<Icon className="login__icon icon" icon={faUser} />
+							</div>
+							<input
+								className="login__input"
+								type="text"
+								placeholder="Your ID / Name"
+								ref={name_ref}
+							/>
+						</div>
+						<div className="login__input-group">
+							<div className="login__icon-box">
+								<Icon className="login__icon icon" icon={faKey} />
+							</div>
+							<input
+								className="login__input"
+								type="password"
+								placeholder="Your password"
+								ref={password_ref}
+							/>
+						</div>
+						{form_bottom_obj}
+					</form>
+					<p className="login__caption">{error}</p>
 				</div>
-				<form className="login__form" onSubmit={submit}>
-					<div className="login__input-group">
-						<div className="login__icon-box">
-							<Icon className="login__icon icon" icon={faUser} />
-						</div>
-						<input
-							className="login__input"
-							type="text"
-							placeholder="Your ID / Name"
-							ref={name_ref}
-						/>
-					</div>
-					<div className="login__input-group">
-						<div className="login__icon-box">
-							<Icon className="login__icon icon" icon={faKey} />
-						</div>
-						<input
-							className="login__input"
-							type="password"
-							placeholder="Your password"
-							ref={password_ref}
-						/>
-					</div>
-					{form_bottom_obj}
-				</form>
-				<p className="login__caption">{error}</p>
 			</div>
-		</div>
-	);
+		);
 }
