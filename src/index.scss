@@ -1,0 +1,84 @@
+@font-face {
+	font-family: "Opensans Regular";
+	src: url(./fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Opensans Bold";
+	src: url(./fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+	font-family: "Opensans Bold";
+	src: url(./fonts/OpenSans-Italic.ttf);
+}
+
+$color-1: rgb(245, 245, 245);
+$color-2: rgb(240, 240, 240);
+$color-3: rgb(90, 90, 90);
+$color-4: rgb(70, 70, 70);
+
+html,
+body,
+#root,
+.app {
+	width: 100%;
+	height: 100%;
+	background: $color-1;
+}
+
+html,
+body,
+#root,
+h1,
+h2,
+h3,
+p,
+ul,
+form {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+button {
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-radius: 5px;
+}
+
+input {
+	border: none;
+}
+
+h1,
+h2,
+h3 {
+	color: $color-4;
+}
+
+p,
+input,
+li,
+textarea,
+button {
+	font-size: 13pt;
+	color: $color-3;
+}
+
+p,
+h1,
+h2,
+h3 {
+	pointer-events: none;
+}
+
+* {
+	font-family: "Opensans Regular", sans-serif;
+}
+
+@import "./components/App/App.scss";
+@import "./components/Login/Login.scss";
