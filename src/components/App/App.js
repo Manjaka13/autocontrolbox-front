@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 
 import Login from "../Login/Login";
+import Home from "../Home/Home";
 
 export default function App() {
-	const [user] = useState(null);
+	const [user] = useState([]);
 
 	return (
 		<Router>
@@ -18,9 +19,7 @@ export default function App() {
 					<Route path="/login">
 						{user ? <Redirect to="/" /> : <Login user={user} />}
 					</Route>
-					<Route path="/">
-						{!user ? <Redirect to="/login" /> : <h1>Hello from home</h1>}
-					</Route>
+					<Route path="/">{!user ? <Redirect to="/login" /> : <Home />}</Route>
 				</Switch>
 			</div>
 		</Router>

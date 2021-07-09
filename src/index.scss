@@ -9,7 +9,7 @@
 }
 
 @font-face {
-	font-family: "Opensans Bold";
+	font-family: "Opensans Italic";
 	src: url(./fonts/OpenSans-Italic.ttf);
 }
 
@@ -25,6 +25,9 @@ body,
 	width: 100%;
 	height: 100%;
 	background: $color-1;
+	.bold {
+		font-family: "Opensans Bold", sans-serif;
+	}
 }
 
 html,
@@ -82,3 +85,7 @@ h3 {
 
 @import "./components/App/App.scss";
 @import "./components/Login/Login.scss";
+@import "./components/Home/Home.scss";
+@import "./components/Navbar/Navbar.scss";
+@import "./components/Navbarprofile/Navbarprofile.scss";
+@import "./components/Viewbox/Viewbox.scss";

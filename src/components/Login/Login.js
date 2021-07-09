@@ -5,7 +5,7 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faKey, faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function Login({ user }) {
-	const [link, redirect] = useState(null);
+	const [link] = useState(null);
 	const [error, set_error] = useState("");
 	const [loading, set_loading] = useState(false);
 	const name_ref = useRef(null);
