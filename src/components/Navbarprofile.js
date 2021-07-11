@@ -7,7 +7,7 @@ import {
 	faPlayCircle,
 	faStopCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import profile_image from "../images/profile-default.jpg";
+import profile_image from "../assets/images/profile-default.jpg";
 
 export default function Navbarprofile() {
 	return (
@@ -19,7 +19,7 @@ export default function Navbarprofile() {
 					alt="Profile avatar"
 				/>
 			</div>
-			<h1 className="navbarprofile__name">Raherimanana</h1>
+			<h1 className="navbarprofile__name">Serge</h1>
 			<Icon className="navbarprofile__caretDown" icon={faCaretDown} />
 			<ul className="navbarprofile__menu">
 				<li className="navbarprofile__item">

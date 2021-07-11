@@ -7,11 +7,127 @@
 	align-items: center;
 
 	&__box {
+		display: flex;
 		width: 80%;
 		height: 80%;
 		border-radius: 20px;
 		overflow: hidden;
 		background: white;
-		box-shadow: 0px 0px 20px rgb(220, 220, 220);
+		box-shadow: 0px 0px 20px rgb(190, 190, 190);
+	}
+
+	&__left,
+	&__right {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		background: rgb(240, 240, 240);
+		&--active {
+			background: transparent;
+		}
+	}
+
+	&__clockicon {
+		width: 100%;
+		height: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 35pt;
+		transition: all 0.2s ease-out;
+		background: rgb(240, 240, 240);
+		&--active {
+			background: transparent;
+		}
+	}
+
+	.numberlist {
+		display: flex;
+		flex-direction: column;
+		width: 15%;
+		height: 100%;
+		justify-content: flex-end;
+
+		&__item {
+			width: 100%;
+			height: 20%;
+			box-shadow: 0px 0px 1px black inset;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 35pt;
+			font-weight: bold;
+			background: rgb(240, 240, 240);
+			pointer-events: none;
+			&--active {
+				color: rgb(26, 115, 232);
+				background: rgb(247, 247, 247);
+			}
+		}
+	}
+
+	.ihmcontent {
+		width: 85%;
+		height: 100%;
+	}
+
+	.subdivision {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 20%;
+		justify-content: space-evenly;
+		pointer-events: none;
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: rgb(240, 240, 240);
+			box-shadow: 0px 0px 1px black inset;
+			font-weight: bold;
+			font-size: 25pt;
+			&--active {
+				color: rgb(26, 115, 232);
+				background: rgb(247, 247, 247);
+			}
+		}
+
+		&__icon {
+			margin-left: 10px;
+			margin-right: 10px;
+			font-size: 16pt;
+		}
+	}
+
+	.row {
+		width: 100%;
+		height: 20%;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+
+		&__cell {
+			width: 100%;
+			height: 100%;
+			box-shadow: 0px 0px 1px black inset;
+			display: flex;
+		}
+
+		&__item1,
+		&__item2 {
+			height: 100%;
+		}
+
+		&__item1 {
+			width: 30%;
+			box-shadow: -1px 0px 1px rgb(190, 190, 190) inset;
+		}
+
+		&__item2 {
+			width: 70%;
+		}
 	}
 }
