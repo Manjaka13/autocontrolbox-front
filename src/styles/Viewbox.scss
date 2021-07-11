@@ -119,6 +119,9 @@
 		&__item1,
 		&__item2 {
 			height: 100%;
+			pointer-events: none;
+			cursor: auto;
+			transition: all 0.2s ease-out;
 		}
 
 		&__item1 {
@@ -128,6 +131,42 @@
 
 		&__item2 {
 			width: 70%;
+		}
+	}
+
+	&__left--active .row__item1,
+	&__left--active .row__item2 {
+		pointer-events: auto;
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		&:hover {
+			background: rgb(220, 220, 220);
+		}
+		&::after {
+			position: absolute;
+			content: "Edit";
+			font-size: 8pt;
+			padding: 5px 20px 5px 20px;
+			text-align: center;
+			background: white;
+			box-shadow: 0px 0px 1px black;
+			pointer-events: none;
+			opacity: 0;
+			transition: 0.3s ease-in;
+			font-family: "Opensans Regular", sans-serif;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+
+	&__left--active .row__item1 {
+		&::after {
+			padding: 5px;
 		}
 	}
 }
