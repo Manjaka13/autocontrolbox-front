@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Spinner from "../Spinner/Spinner";
+import Spinner from "./Spinner";
 import { Redirect } from "react-router-dom";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faKey, faUser } from "@fortawesome/free-solid-svg-icons";

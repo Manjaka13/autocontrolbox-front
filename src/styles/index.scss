@@ -1,16 +1,16 @@
 @font-face {
 	font-family: "Opensans Regular";
-	src: url(./fonts/OpenSans-Regular.ttf);
+	src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
 	font-family: "Opensans Bold";
-	src: url(./fonts/OpenSans-Bold.ttf);
+	src: url(../fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
 	font-family: "Opensans Italic";
-	src: url(./fonts/OpenSans-Italic.ttf);
+	src: url(../fonts/OpenSans-Italic.ttf);
 }
 
 $color-1: rgb(245, 245, 245);
@@ -83,9 +83,9 @@ h3 {
 	font-family: "Opensans Regular", sans-serif;
 }
 
-@import "./components/App/App.scss";
-@import "./components/Login/Login.scss";
-@import "./components/Home/Home.scss";
-@import "./components/Navbar/Navbar.scss";
-@import "./components/Navbarprofile/Navbarprofile.scss";
-@import "./components/Viewbox/Viewbox.scss";
+@import "./App.scss";
+@import "./Login.scss";
+@import "./Home.scss";
+@import "./Navbar.scss";
+@import "./Navbarprofile.scss";
+@import "./Viewbox.scss";
